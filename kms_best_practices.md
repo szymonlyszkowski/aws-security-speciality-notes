@@ -6,6 +6,7 @@
   * Cross account sharing keys
   * Encryption context
   * MFA for keys
+    - For specific/critical actions (`PutKeyPolicy, ScheduleKeyDeletion, DeleteAlias, DeleteImportedKeyMaterial`) MFA check should be enabled. It can be done as condition on key policy. CMK policy will validate that their MFA was authenticated within the last 300 sec or 5 minutes.
 
 ## Detective controls
 Making sure AWS KMS is properly configured to log necessary information needed to gain greated visibility into environment.

@@ -8,6 +8,16 @@
   * MFA for keys
 
 ## Detective controls
+Making sure AWS KMS is properly configured to log necessary information needed to gain greated visibility into environment.
+
+* CMK Auditing
+  - Enable `CloudTrail` logging in AWS Account -> KMS API calls are logged in defined S3 bucket. Contain following info: _Source IP Address, request author, request timestamp etc._
+  - Monitor CloudTrail logs (using aws services or other security tool) for specific **actions**: `ScheduleKeyDeletion, PutKeyPolicy, DeleteAlias, DisableKey, DeleteImportedKeyMaterial`
+  - KMS emits `CloudWatch` **event** when key is: **rotated, deleted, imported key material expires**
+
+* CMK Validation
+  - Use `AWS Config` to make sure AWS services are set up properly e.g. EBS volumes should be encrypted -> Use `ENCRYPTED_VOLUMES` AWS Config rule.
+  - Correlate Tags. Tags can be used to verify that correct CMK is being used for given action e.g. _CMK in use belongs to same business category as the resource it's being used on_
 
 ## Infrastructure Security
 

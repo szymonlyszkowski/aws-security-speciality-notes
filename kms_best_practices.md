@@ -4,6 +4,8 @@
   * IAM Policies usage within KMS
   * Key Policies
   * Cross account sharing keys
+    - delegate permissions by including **root principal of trusted account in KMS key policy**. Trusted Accont then delgate permissions to AIM users & roles. Simpler management but relies on trusted accounts to ensure delegation are correctly managed.
+    - **explicitly manage permissions to all authorized users in key policy**. Makes policy complex & less manageable.
   * Encryption context
   * MFA for keys
     - For specific/critical actions (`PutKeyPolicy, ScheduleKeyDeletion, DeleteAlias, DeleteImportedKeyMaterial`) MFA check should be enabled. It can be done as condition on key policy. CMK policy will validate that their MFA was authenticated within the last 300 sec or 5 minutes.

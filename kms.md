@@ -4,7 +4,7 @@
 * CMKs can be rotated manually using CLI or AWS Console
 
 
-## Managed keys
+## AWS Managed keys
 * Rotated by default automatically
-* Rotation of managed keys **cannot** be disabled _TODO_
-* Default rotation period is **x** days
+* Rotation of managed keys **cannot** be disabled
+* Default rotation period is **3** years

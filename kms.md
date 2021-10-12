@@ -8,3 +8,20 @@
 * Rotated by default automatically
 * Rotation of managed keys **cannot** be disabled
 * Default rotation period is **3** years
+
+
+TODO:
+
+1. AWS Owned keys
+2. Data key
+3. Envelope encryption
+4. ABAC (attribute based access control) vs. aliases
+5. Key material
+6. Generation of key pair
+7. KeyId
+8. Grant
+9. Auditing of KMS key usage -> CloudTrail
+10. Key Spec
+11. Symmetric vs. assymetric keys
+12. Custom Key Stores -> HSM
+13. Grant (temp access)

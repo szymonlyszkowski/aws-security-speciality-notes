@@ -9,6 +9,13 @@
 * Rotation of managed keys **cannot** be disabled
 * Default rotation period is **3** years
 
+### Key Material:
+When to **reimport** _key material_:
+* Key has *expired*
+* Key was *lost* (by accident)
+* Key was *deleted* (by accident)
+
+
 
 TODO:
 

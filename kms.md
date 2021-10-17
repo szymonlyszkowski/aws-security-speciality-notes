@@ -15,6 +15,13 @@ When to **reimport** _key material_:
 * Key was *lost* (by accident)
 * Key was *deleted* (by accident)
 
+### Data Key (Symmetric)
+Data is just **encrypted plaintext key**. We should avoid distributing **plaintext** keys. Instead data keys should be distributed and when needed use(encrypt any data):
+    1. Call AWS KMS decryption API to get **plaintext data key**
+    1. Use AWS KMS encryption API with provided **plaintext data key & data to be encrypted** to achieve encryption.
+
+Check more in [Encrypt data with a data key](https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html)
+
 
 
 TODO:
